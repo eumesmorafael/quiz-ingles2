@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="A 20-question quiz about information security, based on your course materials.">
+  <title>Information Security Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Quiz home">
+        <span class="brand-mark" aria-hidden="true">Q</span>
+        <span>COURSE CHALLENGE</span>
+      </a>
+      <span class="topbar-note">20 QUESTIONS <span aria-hidden="true">·</span> 1 QUIZ</span>
+    </header>
+
+    <section class="quiz-layout" aria-labelledby="page-title">
+      <div class="intro">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Test what you know</p>
+        <h1 id="page-title">Information<br><span>Security.</span></h1>
+        <p class="intro-copy">A 20-question challenge about protecting information, systems, and users. Choose the best answer and test what you remember.</p>
+        <div class="topic-list" aria-label="Quiz topics">
+          <span>Threats &amp; risks</span>
+          <span>Malware</span>
+          <span>Passwords</span>
+          <span>Data protection</span>
+        </div>
+      </div>
+
+      <section class="quiz-card" aria-label="Quiz">
+        <div id="quiz-content">
+          <div class="quiz-meta">
+            <span id="question-counter">QUESTION 01 <span class="counter-muted">/ 20</span></span>
+            <span id="score-counter">SCORE <strong>0</strong></span>
+          </div>
+          <div
+            class="progress-track"
+            role="progressbar"
+            aria-label="Quiz progress"
+            aria-valuemin="0"
+            aria-valuemax="20"
+            aria-valuenow="0"
+          >
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+
+          <div class="question-area" aria-live="polite">
+            <p class="question-label" id="question-topic">WEB PROJECTS</p>
+            <h2 id="question-text"></h2>
+            <div class="answer-list" id="answer-list" role="group" aria-label="Answer choices"></div>
+          </div>
+
+          <div class="feedback" id="feedback" aria-live="polite" hidden>
+            <p class="feedback-title" id="feedback-title"></p>
+            <p class="feedback-explanation" id="feedback-explanation"></p>
+          </div>
+
+          <div class="card-footer">
+            <span class="keyboard-hint">Select an answer to continue</span>
+            <button class="next-button" id="next-button" type="button" hidden>
+              Next question <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+
+        <section class="results" id="results" aria-live="polite" hidden>
+          <div class="result-icon" aria-hidden="true">✓</div>
+          <p class="question-label">CHALLENGE COMPLETE</p>
+          <h2 id="result-heading">Well done!</h2>
+          <p class="result-score"><span id="final-score">0</span><span class="result-total"> / 20 correct</span></p>
+          <p class="result-copy" id="result-copy"></p>
+          <button class="next-button restart-button" id="restart-button" type="button">
+            Play again <span aria-hidden="true">↻</span>
+          </button>
+        </section>
+      </section>
+    </section>
+
+    <footer class="page-footer">
+      <span>LEARN IT. TEST IT. KEEP IT SECURE.</span>
+      <span>MADE FOR THE CURIOUS <span class="footer-star" aria-hidden="true">✳</span></span>
+    </footer>
+  </main>
+</body>
+</html>
